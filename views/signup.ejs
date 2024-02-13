@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h1>Your Fridge Awaits Sensei</h1>
+    <form method="post" action="/redirect">
+        <input type="hidden" name="formIdentifier" value="signupForm">
+        Sign Up
+        <fieldset>
+            Username: <input type="text" name="username" required><br>
+            Password: <input type="text" name="password" required><br>
+            <input type="submit" value="Sign Up">
+        </fieldset>
+        <a href="/">Back to Log In</a>
+    </form>
+</body>
+</html>

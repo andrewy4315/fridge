@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fridge</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h1>Fridge Items</h1>
+
+    <form action="/addItem" method="post">
+        Add Item: <input type="text" name="itemName" required><input type="number" name="quantity" value="1" required>
+        <input type="submit" value="Add">
+    </form>
+
+    <ul>
+        <% groceries.forEach((item, index) => { %>
+            <li>
+                <% Object.entries(item).forEach(([key, value]) => { %>
+                    <%= key %>: <%= value %>
+                <% }); %>
+                <form action="/deleteItem" method="post" style="display: inline;">
+                    <input type="hidden" name="index" value="<%= index %>">
+                    <input type="submit" value="Delete">
+                </form>
+            </li>
+        <% }); %>
+    </ul>
+    <br>
+    <form action="/saveGroceries" method="post">
+        <input type="submit" value="Save">
+    </form><br>
+
+    <form action="/recipe" method="post">
+        Search for a recipe: 
+        <input type="text" name="food" required>
+        <input type="submit" value="Search">
+    </form><br>
+</body>
+</html>

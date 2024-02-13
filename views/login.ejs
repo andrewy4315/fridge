@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h1>Your Fridge Awaits Sensei</h1>
+    <form method="post" action="/redirect">
+        <input type="hidden" name="formIdentifier" value="loginForm">
+        Log in
+        <fieldset>
+            Username: <input type="text" name="username" required><br>
+            Password: <input type="text" name="password" required><br>
+            <input type="submit" value="Log In">
+        </fieldset>
+        <%- msg %><br>
+        If you don't have an account yet, <a href="/signup">Sign up!</a>
+    </form>
+</body>
+</html>
