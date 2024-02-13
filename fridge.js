@@ -153,7 +153,7 @@ app.post("/recipe", (req, res) => {
           query: food
         },
         headers: {
-          'X-RapidAPI-Key': 'af2721db99msh32a1fbbd493d460p13522djsnd59ca9bd4124',
+          'X-RapidAPI-Key': 'my_key',
           'X-RapidAPI-Host': 'recipe-by-api-ninjas.p.rapidapi.com'
         }
       };
